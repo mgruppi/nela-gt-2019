@@ -1,4 +1,4 @@
-# nela-gt-2019
+# NELA-GT_2019
 
 This repository contain examples of how to use the NELA-GT-2019 data set with Python 3.
 
