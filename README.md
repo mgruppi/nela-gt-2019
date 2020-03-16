@@ -4,8 +4,13 @@ This repository contain examples of how to use the NELA-GT-2019 data set with Py
 
 ## load-sqlite3.py
 
-Shows how to load the data from the Sqlite3 database using SQL queries.
+* How to load the data from the Sqlite3 database using SQL queries.
+  + Loading data from single or multiple sources from the database
+  + Loading data from the database into a Pandas dataframe
+
 
 ## load-json.py
 
-Shows how to load source JSON files.
+* How to load NELA in JSON format with Python 3.
+  + Loading a single source's JSON
+  + Loading a directory of NELA JSON files - **WARNING**: this may take lots of memory
