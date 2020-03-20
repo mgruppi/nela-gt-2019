@@ -9,7 +9,7 @@ import os
 # Start here
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("path", type=str, help="Path to JSON file")
+    parser.add_argument("path", type=str, help="Path to NELA JSON file")
 
     args = parser.parse_args()
 

@@ -2,21 +2,32 @@
 
 This repository contain examples of how to use the NELA-GT-2019 data set with Python 3.
 
-__For more details about this data set, check the paper__:
-`<link>`
+__Download the dataset from here__: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/O7FWPO
 
-If you use this dataset in your work, please cite us as follows:
-`<citation>`
+__For more details about this dataset, check the paper__:
+https://arxiv.org/abs/2003.08444
 
+If you use this dataset in your work, please cite us as follows: <br>
+```
+@misc{
+    gruppi2020nelagt2019,
+    title={NELA-GT-2019: A Large Multi-Labelled News Dataset for The Study of Misinformation in News Articles},
+    author={Maurício Gruppi and Benjamin D. Horne and Sibel Adalı},
+    year={2020},
+    eprint={2003.08444},
+    archivePrefix={arXiv},
+    primaryClass={cs.CY}
+}
+```
 ## Data
 
-|Metadata||
+Metadata||
 ---|---
-Dataset name | `NELA-GT-2019`
-Formats|`JSON`, `Sqlite3`
-No. of articles | `1.12M`
-No. of sources | `260`
-Collection period| `2019-01-01` to `2019-12-31`
+Dataset name|`NELA-GT-2019`
+Formats|`Sqlite3`,`JSON`
+No. of articles|`1118821`
+No. of sources|`261`
+Collection period|`2019-01-01` to `2019-12-31`
 
 ### Fields
 
@@ -27,7 +38,8 @@ Each data point collected corresponds to an article and contains the fields desc
 `id` | string | ID of the article
 `date` | string | date of publication (`YYYY-MM-DD`)
 `source` | string | name of the source
-`title` | string | article headline
+`title` | string | article's headline
+`content` | string | article's body text
 `author` | string | author who signed the article
 `published` | string | date time string as provided by source
 `published_utc` | integer | unix timestamp of publication
@@ -42,6 +54,8 @@ We provide aggregated labels based on Media Bias/Fact Check reports, classifying
 * _Unreliable_ - class 2
 
 These labels can be found in `labels.csv`
+
+__Note__: the labels used in this aggregation were collected from Media Bias/Fact Check on Mar 20, 2020.
 
 
 ## Examples
@@ -60,7 +74,7 @@ python3 load-sqlite3.py <path-to-database>
 
 * How to load NELA in JSON format with Python 3.
   + Loading a single source's JSON
-  + Loading a directory of NELA JSON files - **WARNING**: this may take lots of memory
+  + Loading a directory of NELA JSON files - **WARNING**: this consumes a lot of memory
 
 Usage:
 ```

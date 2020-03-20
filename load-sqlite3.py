@@ -23,7 +23,7 @@ def execute_query_pandas(path, query):
 def main():
     # Make input command line arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("path", type=str, help="Path to database file")
+    parser.add_argument("path", type=str, help="Path to NELA database file")
     args = parser.parse_args()
 
     # Query 1: select all articles from a specific source
