@@ -44,6 +44,7 @@ Each data point collected corresponds to an article and contains the fields desc
 `published` | string | date time string as provided by source
 `published_utc` | integer | unix timestamp of publication
 `collection_utc` | integer | unix timestamp of collection date
+`url` | string  | url of the paper
 
 ### Aggregated labels
 
